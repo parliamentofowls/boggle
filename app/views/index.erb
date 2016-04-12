@@ -1,0 +1,28 @@
+<div class= "container">
+  <div class ="welcome-header">
+  <h1>Boggle!</h1>
+  <button class="shake"> Shake!</button>
+  </div>
+  <div class="board">
+    <div class="row">
+      <% for i in 0..3 %>
+        <div id = "index-<%=i%>" class="cell"> &nbsp;</div>
+      <% end %>
+    </div>
+    <div class="row">
+      <% for i in 4..7 %>
+        <div id = "index-<%=i%>" class="cell"> &nbsp;</div>
+      <% end %>
+    </div>
+    <div class="row">
+      <% for i in 8..11 %>
+        <div id = "index-<%=i%>" class="cell"> &nbsp;</div>
+      <% end %>
+    </div>
+    <div class="row">
+      <% for i in 12..15 %>
+        <div id = "index-<%=i%>" class="cell"> &nbsp;</div>
+      <% end %>
+    </div>
+  </div>
+</div>

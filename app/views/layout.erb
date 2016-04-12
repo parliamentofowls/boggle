@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="/css/application.css">
+  <link href='//fonts.googleapis.com/css?family=Lobster+Two:700,400' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Signika:400,700' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+<!--   <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicons/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png"> -->
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/favicons/manifest.json">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <!-- Comment line above and uncomment line below if working offline -->
+  <script type="js/jquery-1.11.1.min.js"></script>
+  <script src="/js/boggle_game.js"></script>
+    <script src="/js/helper.js"></script>
+    <script src="/js/application.js"></script>
+
+  <title>Boggle</title>
+</head>
+
+  <div class="container">
+<body>
+  <div class="mainbody">
+    <header>
+      <nav role="navigation">
+        <ul>
+          <% if session[:user_id] %>
+            <li><a href = "/users/<%=current_user.id%>/events">Home</a></li>
+            <li><a href="/users/logout">logout</a></li>
+          <% else %>
+            <h2><a href = "/">New Game</a></h2>
+          <% end %>
+        </ul>
+      </nav>
+    </header>
+    <%= yield %>
+  </div>
+</body>
+</html>
